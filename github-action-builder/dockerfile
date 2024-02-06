@@ -1,0 +1,14 @@
+# Use a base image
+FROM alpine:latest
+
+# Set the working directory inside the container
+WORKDIR /github-action
+
+# Copy the git_commit.sh script into the container
+COPY git_commit.sh .
+
+# Set execute permissions on the script
+RUN chmod +x git_commit.sh
+
+# Define the command to run the script when the container starts
+CMD ["./git_commit.sh"]

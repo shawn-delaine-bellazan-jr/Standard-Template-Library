@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  github-action-builder:
+    build:
+      context: ./github-action-builder
+      dockerfile: Dockerfile
+    volumes:
+      - ./github-action-builder:/github-action
+    environment:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}

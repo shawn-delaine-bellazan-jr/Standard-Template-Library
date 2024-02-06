@@ -15,3 +15,5 @@ jobs:
         with:
           toolchain: stable
           profile: minimal
+
+        
